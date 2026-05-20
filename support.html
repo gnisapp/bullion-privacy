@@ -4,12 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bullion — Support</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Mono&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Space+Mono&display=swap" rel="stylesheet">
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
-      background-color: #0D0B08;
+      background: #0D0B08;
       color: #F2ECD9;
       font-family: 'Playfair Display', serif;
       min-height: 100vh;
@@ -17,121 +23,103 @@
     }
 
     .container {
-      max-width: 720px;
+      max-width: 760px;
       margin: 0 auto;
     }
 
     .seal {
-      width: 80px;
-      height: 80px;
+      width: 84px;
+      height: 84px;
       margin: 0 auto 40px;
-      background: #5C1A1A;
       border-radius: 50%;
       border: 2px solid #C9A84C;
+      background: #5C1A1A;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
       color: #C9A84C;
-      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
       font-weight: 700;
     }
 
     h1 {
-      font-size: 2.8rem;
-      color: #C9A84C;
       text-align: center;
-      letter-spacing: 0.02em;
-      margin-bottom: 12px;
+      color: #C9A84C;
+      font-size: 2.9rem;
+      margin-bottom: 10px;
+      letter-spacing: 0.03em;
     }
 
     .tagline {
       text-align: center;
-      font-style: italic;
       color: #C9A84C;
       opacity: 0.7;
+      font-style: italic;
       font-size: 0.95rem;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.16em;
       margin-bottom: 16px;
     }
 
     .divider {
+      width: 220px;
+      margin: 32px auto;
       border: none;
       border-top: 1px solid #C9A84C;
       opacity: 0.3;
-      margin: 32px auto;
-      width: 200px;
     }
 
     .subtitle {
       text-align: center;
-      font-style: italic;
+      font-family: 'Space Mono', monospace;
       color: #F2ECD9;
       opacity: 0.6;
-      font-size: 0.9rem;
-      margin-bottom: 48px;
-      font-family: 'Space Mono', monospace;
-      letter-spacing: 0.08em;
+      font-size: 0.85rem;
+      letter-spacing: 0.14em;
+      margin-bottom: 80px;
     }
 
     h2 {
-      font-size: 1.2rem;
       color: #C9A84C;
-      letter-spacing: 0.12em;
+      font-size: 1.15rem;
       text-transform: uppercase;
-      margin: 48px 0 16px;
+      letter-spacing: 0.14em;
+      margin: 52px 0 18px;
     }
 
     p {
       font-size: 1rem;
       line-height: 1.9;
-      color: #F2ECD9;
-      opacity: 0.85;
-      margin-bottom: 16px;
+      opacity: 0.88;
+      margin-bottom: 18px;
     }
 
     .mono {
       font-family: 'Space Mono', monospace;
-      font-size: 0.85rem;
       color: #C9A84C;
-      opacity: 0.7;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      opacity: 0.75;
     }
 
-    .contact-block {
-      border: 1px solid #C9A84C;
-      opacity: 0.85;
-      padding: 32px;
-      margin: 32px 0;
+    .panel {
+      border: 1px solid rgba(201,168,76,0.35);
+      padding: 38px;
+      margin: 42px 0;
     }
 
-    .contact-block p {
-      margin-bottom: 8px;
+    .warning {
+      border: 1px solid rgba(201,168,76,0.45);
+      padding: 42px;
+      margin: 48px 0;
     }
 
-    .caution-block {
-      border: 1px solid #C9A84C;
-      padding: 40px;
-      margin: 40px 0;
-      opacity: 0.85;
-    }
-
-    .footer {
-      margin-top: 80px;
+    .warning-title {
       text-align: center;
       font-family: 'Space Mono', monospace;
-      font-size: 0.75rem;
-      color: #F2ECD9;
-      opacity: 0.3;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-    }
-
-    .footer-divider {
-      border: none;
-      border-top: 1px solid #C9A84C;
-      opacity: 0.15;
-      margin: 40px auto 32px;
-      width: 100%;
+      color: #C9A84C;
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
+      margin-bottom: 24px;
     }
 
     a {
@@ -139,96 +127,260 @@
       text-decoration: none;
       font-family: 'Space Mono', monospace;
       font-size: 0.85rem;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
     }
 
     a:hover {
       opacity: 0.7;
     }
+
+    .footer-divider {
+      border: none;
+      border-top: 1px solid rgba(201,168,76,0.2);
+      margin: 48px auto 32px;
+    }
+
+    .footer {
+      text-align: center;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      opacity: 0.3;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 40px 20px;
+      }
+
+      h1 {
+        font-size: 2.4rem;
+      }
+
+      .panel,
+      .warning {
+        padding: 28px;
+      }
+    }
   </style>
 </head>
+
 <body>
+
   <div class="container">
 
     <div class="seal">B</div>
 
     <h1>Bullion</h1>
-    <p class="tagline">— OLD MONEY · NEW GAMES —</p>
-    <hr class="divider"/>
-    <p class="subtitle">MEMBER SUPPORT · THE SECRETARY'S OFFICE</p>
 
-    <p>The Club secretary is available to assist members with matters of a technical or administrative nature. We ask that all enquiries be conducted with the composure befitting a member of your standing.</p>
+    <p class="tagline">— OLD MONEY · NEW GAMES —</p>
+
+    <hr class="divider">
+
+    <p class="subtitle">
+      MEMBER SUPPORT · THE SECRETARY'S OFFICE
+    </p>
+
+    <p>
+      The Club secretary is available to assist members with matters of a technical or administrative nature. We ask that all enquiries be conducted with the composure befitting a member of your standing.
+    </p>
 
     <h2>I. The Daily Directive</h2>
-    <p>A new directive is issued to all members simultaneously each day. If today's directive has not yet appeared, we recommend closing and reopening the app. The archives are occasionally slow to warm.</p>
-    <p>Directives are the same for all members globally. They cannot be changed, skipped, or negotiated.</p>
+
+    <p>
+      A new directive is issued to all members simultaneously at midnight GMT. If today's directive has not yet appeared, we recommend closing and reopening the app. The archives are occasionally slow to warm.
+    </p>
+
+    <p>
+      Directives are identical for all members globally. They cannot be skipped, altered, or negotiated.
+    </p>
 
     <h2>II. Verified Sightings</h2>
-    <p>Evidence submitted to Verified Sightings must relate to the current day's directive. Submissions are reviewed by fellow members, whose verdicts determine a member's standing within the Club.</p>
-    <p>To remove a submission, navigate to your Dossier, select Personal Archive, and withdraw the relevant entry. Withdrawn submissions are removed from active circulation within the Club on a best-effort basis. Please note that verdicts cast by other members on a withdrawn sighting, and any reports filed against it, may remain as part of the Club's moderation record. These are not surfaced publicly.</p>
+
+    <p>
+      Evidence submitted to Verified Sightings must relate to the current directive. Submissions are reviewed by fellow members, whose verdicts contribute to a member's standing within the Club.
+    </p>
+
+    <p>
+      To remove a submission, navigate to your Dossier and withdraw the relevant entry from your Personal Archive. Withdrawn submissions are removed from active systems within a reasonable period of time.
+    </p>
+
+    <p>
+      Please note that moderation records, reports, or verdict metadata associated with withdrawn submissions may remain internally for security and operational purposes. Such records are never displayed publicly.
+    </p>
 
     <h2>III. Camera & Photo Access</h2>
-    <p>Bullion requests access to your device camera and photo library solely for the submission of evidence to Verified Sightings. No access is used for advertising, tracking, or any unrelated purpose whatsoever. You may revoke this access at any time via your device settings. The Club will note your discretion.</p>
 
-    <h2>IV. Correspondence & Chambers</h2>
-    <p>Direct correspondence requires a mutual Introduction before Dispatches may be exchanged. If an Introduction has been requested and not yet accepted, the matter is in the other party's hands. Patience is a virtue the Club holds in high regard.</p>
-    <p>Chambers may be created by any member and are protected by a wax seal password of the founder's choosing. If you have misplaced a Chamber password, it cannot be recovered. The Club does not hold spare keys.</p>
+    <p>
+      Bullion requests access to your camera and photo library solely to facilitate the submission of evidence to Verified Sightings.
+    </p>
+
+    <p>
+      The Club does not use this access for advertising, tracking, analytics profiling, or any unrelated purpose whatsoever. Access permissions may be revoked at any time through your device settings.
+    </p>
 
     <h2>IV. Your Alias</h2>
-    <p>Your alias is assigned upon entry by the Club. Should you find it unsuitable, a single amendment may be requested. However, once a new alias is accepted and sealed, it is binding for a period of thirty days. No further changes will be entertained during this time.</p>
-    <p>Choose carefully. The Club is watching.</p>
+
+    <p>
+      Your alias is assigned upon entry by the Club. Should you find it unsuitable, a single amendment may be requested.
+    </p>
+
+    <p>
+      Once accepted and sealed, an alias amendment becomes binding for a period of thirty days. No further changes may be entertained during this interval.
+    </p>
+
+    <p>
+      Choose carefully. The Club is watching.
+    </p>
 
     <h2>V. Prestige & The Ledger</h2>
-    <p>A member's standing is measured in Sovereigns (§) — the Club's sole unit of distinction. Net Worth is accrued through verdicts received on Verified Sightings.</p>
-    <p><span class="mono">Distinguished verdict — §200</span></p>
-    <p><span class="mono">Acceptable verdict — §100</span></p>
-    <p><span class="mono">Recently Rich verdict — §0</span></p>
-    <p>The Ledger is a live ranking of all members by current Net Worth. It updates in real time as verdicts are issued.</p>
 
-    <h2>VI. Payments</h2>
-    <p>Bullion is currently available as a web application. No payment is required at this time. Should a paid iOS application become available via the Apple App Store in the future, this section will be updated accordingly. There are no in-app purchases. There are no subscriptions. No payment will ever be requested without prior notice.</p>
+    <p>
+      A member's standing is measured in Sovereigns (§) — the Club's sole unit of distinction. Net Worth is accrued through verdicts received on Verified Sightings.
+    </p>
+
+    <p class="mono">DISTINGUISHED VERDICT — §200</p>
+    <p class="mono">ACCEPTABLE VERDICT — §100</p>
+    <p class="mono">UNREFINED VERDICT — §0</p>
+
+    <p>
+      The Ledger reflects the current standing of all members and updates continuously as verdicts are issued.
+    </p>
+
+    <h2>VI. Payments & Purchases</h2>
+
+    <p>
+      Bullion is available as a one-time upfront purchase via the Apple App Store. Pricing may vary by region according to Apple's local storefront policies.
+    </p>
+
+    <p>
+      All payments are processed entirely by Apple. The Club does not receive or store payment card information of any kind.
+    </p>
+
+    <p>
+      There are no subscriptions. There are no recurring fees. No further payment will ever be requested within the Club.
+    </p>
+
+    <p>
+      Refund requests must be directed to Apple through their official support systems.
+    </p>
 
     <h2>VII. Your Data</h2>
-    <p>When you sign in via Apple, your email address and a unique identifier are stored securely as part of your account record. Your alias, prestige tier, induction date, verdicts cast, achievements earned, and any content you submit are all associated with your account.</p>
-    <p>Authentication and access logs — including IP addresses and device information — are maintained by the Club's hosting infrastructure for operational and security purposes only. No third-party advertising or analytics tracking is employed.</p>
-    <p>Your data is not sold. It is not shared with advertisers. It is not used for any purpose beyond operating the Club.</p>
-    <p>To request full deletion of your account and all associated personal data, contact the Club secretary directly at the address below.</p>
+
+    <p>
+      When signing in via Apple, your email address and account identifier are securely associated with your membership record.
+    </p>
+
+    <p>
+      Your alias, prestige standing, verdict history, achievements, uploaded sightings, and moderation history are retained as part of the operation of the Club.
+    </p>
+
+    <p>
+      Authentication logs, IP addresses, and device-related access information may also be retained for operational integrity, abuse prevention, and security monitoring.
+    </p>
+
+    <p>
+      The Club does not sell personal data. It does not share personal data with advertisers. It does not employ third-party advertising networks or behavioural tracking technologies.
+    </p>
+
+    <p>
+      To request deletion of your account and associated personal data, contact the secretary directly at the address below.
+    </p>
 
     <h2>VIII. Technical Difficulties</h2>
-    <p>Should you encounter a matter of Temporary Market Instability — that is to say, a technical error — we recommend the following in order:</p>
-    <p>Close and reopen the app. Ensure your device is running the latest version of Bullion. Check your internet connection. If the matter persists, contact the secretary below with a brief description of the issue and the device you are using.</p>
+
+    <p>
+      Should you encounter a matter of Temporary Market Instability — that is to say, a technical error — we recommend the following in order:
+    </p>
+
+    <p>
+      Close and reopen the app. Ensure your device is running the latest version of Bullion. Confirm that your internet connection remains stable.
+    </p>
+
+    <p>
+      If the matter persists, contact the secretary with a concise description of the issue and the device currently in use.
+    </p>
 
     <h2>IX. Conduct & Reporting</h2>
-    <p>The Club expects its members to conduct themselves with dignity at all times. Should you wish to Lodge a Formal Complaint regarding another member's conduct, please contact the secretary with the relevant details. All complaints are handled with discretion and appropriate gravity.</p>
 
-    <div class="caution-block">
-      <p style="text-align: center; letter-spacing: 0.2em; font-family: 'Space Mono', monospace; font-size: 0.8rem; color: #C9A84C; margin-bottom: 24px;">— A WORD OF CAUTION —</p>
-      <p style="font-style: italic;">By taking on the directives set forth, you acknowledge, upon your own judgment and at your own risk, that any challenge, spectacle, or act undertaken shall be done solely of your own free will and discretion. Let it be clearly understood that neither this Hall, nor its Committee, nor any Keeper, Steward, or affiliated soul advises, commands, encourages, or condones any act unlawful, harmful, obscene, reckless, or offensive to the dignity and peace of others.</p>
-      <p style="font-style: italic;">All pursuits undertaken herein are expected to remain within the bounds of law, civility, and sound reason. Should a member choose to stray beyond such bounds, the burden, consequence, and accountability thereof shall rest upon them alone.</p>
+    <p>
+      The Club expects all members to conduct themselves with dignity befitting the chamber.
+    </p>
+
+    <p>
+      Should you wish to lodge a formal complaint regarding another member's conduct, contact the secretary with the relevant details. All reports are reviewed discreetly and with appropriate gravity.
+    </p>
+
+    <div class="warning">
+
+      <p class="warning-title">— A WORD OF CAUTION —</p>
+
+      <p>
+        By undertaking the directives issued within this chamber, you acknowledge that all acts, challenges, spectacles, and pursuits are performed solely at your own discretion and entirely at your own risk.
+      </p>
+
+      <p>
+        Neither the Club, nor its Committee, nor any Keeper, Steward, or affiliated party advises, commands, encourages, or condones unlawful, dangerous, harmful, obscene, reckless, or offensive conduct.
+      </p>
+
+      <p>
+        All pursuits undertaken within Bullion are expected to remain within the bounds of law, civility, and sound judgment. Responsibility for actions taken beyond those bounds rests exclusively with the member concerned.
+      </p>
+
     </div>
 
     <h2>X. Exiting the Club</h2>
-    <p>Deleting the app removes it from your device only. Your account record — including your email address, unique identifier, alias, prestige standing, verdicts, and achievements — will remain in the Club's archive.</p>
-    <p>To remove your uploaded sightings, navigate to your Dossier, select Personal Archive, and withdraw all entries before deleting the app. Please note this does not erase your full account record.</p>
-    <p>To request complete deletion of your account and all associated personal data, contact the Club secretary directly. We will action your request with appropriate gravity.</p>
+
+    <p>
+      Deleting the app removes it from your device only. Your account record and associated membership data may remain within the Club's infrastructure unless separately deleted.
+    </p>
+
+    <p>
+      Uploaded sightings may be withdrawn individually through your Dossier prior to account deletion.
+    </p>
+
+    <p>
+      To request complete erasure of your membership record and associated personal data, contact the secretary directly.
+    </p>
 
     <h2>XI. Contact the Secretary</h2>
-    <p>For matters not addressed above, the Club secretary may be reached at:</p>
 
-    <div class="contact-block">
-      <p class="mono">support@bullionapp.com</p>
-      <p style="font-style: italic; opacity: 0.6; font-size: 0.9rem; margin-top: 8px;">We endeavour to respond within two business days. Matters of genuine urgency will be treated accordingly.</p>
+    <p>
+      For matters not addressed above, the Club secretary may be reached at:
+    </p>
+
+    <div class="panel">
+
+      <p class="mono">gnis.support@gmail.com</p>
+
+      <p style="margin-top: 12px; opacity: 0.65; font-style: italic;">
+        We endeavour to respond within two business days. Matters of genuine urgency will be treated accordingly.
+      </p>
+
     </div>
 
-    <div style="text-align: center; margin-top: 60px; padding: 32px; border-top: 1px solid #C9A84C; opacity: 0.6;">
-      <h2 style="margin-bottom: 16px;">Privacy Policy</h2>
-      <p style="text-align: center;">We do not sell your data. Ever.</p>
-      <p style="text-align: center;"><a href="https://gnisapp.github.io/bullion-privacy/">READ OUR FULL PRIVACY POLICY</a></p>
+    <div class="panel" style="text-align:center;">
+
+      <h2 style="margin-top:0;">Privacy Policy</h2>
+
+      <p style="text-align:center;">
+        We do not sell your data. Ever.
+      </p>
+
+      <a href="https://gnisapp.github.io/bullion-privacy/">
+        READ OUR FULL PRIVACY POLICY
+      </a>
+
     </div>
 
-    <hr class="footer-divider"/>
-    <p class="footer">In Confidence · In Perpetuity · Est. 2026</p>
+    <hr class="footer-divider">
+
+    <p class="footer">
+      In Confidence · In Perpetuity · Est. 2026
+    </p>
 
   </div>
+
 </body>
 </html>
